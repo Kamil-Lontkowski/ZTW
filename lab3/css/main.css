@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap");
+.main-banner__read-more-btn, button {
+  text-transform: uppercase;
+  cursor: pointer;
+  background: none;
+  border: 2px solid;
+  font: inherit;
+  line-height: 1;
+  margin: 0.5em;
+  padding: 1em 2em;
+  transition: 200ms;
+}
+.darkTheme .main-banner__read-more-btn, .darkTheme button {
+  border-color: #06bae780;
+  color: white;
+}
+.lightTheme .main-banner__read-more-btn, .lightTheme button {
+  border-color: #424242;
+  color: #ffa260;
+}
+.darkTheme .main-banner__read-more-btn:hover, .darkTheme button:hover {
+  color: white;
+  background-color: #06bae780;
+}
+.lightTheme .main-banner__read-more-btn:hover, .lightTheme button:hover {
+  color: white;
+  background-color: #424242;
+}
+
+.main-banner__sub-title, .main-banner__title {
+  user-select: none;
+  color: white;
+  font-size: 5rem;
+  text-shadow: 0.2rem 0.2rem 2px black;
+}
+
+.main-banner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  z-index: 1;
+}
+.main-banner__content {
+  width: fit-content;
+  display: block;
+  margin-left: 20%;
+}
+.main-banner__sub-title {
+  font-size: 1rem;
+}
+.main-banner__read-more-btn {
+  margin-top: 3rem;
+}
+.main-banner::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 80%, rgba(0, 0, 0, 0.6)), url(../assets/images/retro-car-1.jpg);
+  filter: brightness(0.4);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+* {
+  font-family: "Lato", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.darkTheme .content {
+  background-color: #424242;
+  color: white;
+}
+.lightTheme .content {
+  background-color: #f5f5f5;
+  color: black;
+}
+
+/*# sourceMappingURL=main.css.map */
