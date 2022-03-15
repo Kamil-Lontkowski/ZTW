@@ -66,6 +66,62 @@
   background-attachment: fixed;
 }
 
+.toggle-darkmode {
+  background-color: white;
+}
+.toggle-darkmode .toggle-control {
+  transition-duration: 200ms;
+  width: 3rem;
+  height: 1.5rem;
+  display: block;
+  border: 2px solid #8e8e93;
+  border-radius: 1.5rem;
+  position: relative;
+}
+.toggle-darkmode .toggle-control:after {
+  transition-duration: 200ms;
+  content: "";
+  width: 1.5rem;
+  height: 1.5rem;
+  display: block;
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4), 0 3px 2px rgba(0, 0, 0, 0.4);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.toggle-darkmode input {
+  display: none;
+}
+.toggle-darkmode input:checked + .toggle-control {
+  border-color: #7da183;
+  background-color: #7da183;
+}
+.toggle-darkmode input:checked + .toggle-control:after {
+  left: 1.5rem;
+}
+
+.toggle-darkmode {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  position: sticky;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  top: 1rem;
+  margin: 0 2rem 0 auto;
+  width: fit-content;
+}
+.darkTheme .toggle-darkmode {
+  background-color: #424242;
+  color: white;
+}
+.lightTheme .toggle-darkmode {
+  background-color: #f5f5f5;
+  color: black;
+}
+
 * {
   font-family: "Lato", sans-serif;
   margin: 0;

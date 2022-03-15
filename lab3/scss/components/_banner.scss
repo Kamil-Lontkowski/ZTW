@@ -42,7 +42,12 @@
     z-index: -1;
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 80%, rgba(0, 0, 0, 0.60)) , url(../assets/images/retro-car-1.jpg);
+    background-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0) 80%,
+        rgba(0, 0, 0, 0.6)
+      ),
+      url(../assets/images/retro-car-1.jpg);
     filter: brightness(0.4);
     background-size: cover;
     background-position: center;
