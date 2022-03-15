@@ -1,0 +1,90 @@
+@use "./buttons";
+@import "../helpers/mixins";
+
+%benner-title {
+  user-select: none;
+  color: white;
+  font-size: 5rem;
+  text-shadow: 0.2rem 0.2rem 2px black;
+}
+
+.main-banner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  // width: 100vw;
+  z-index: 1;
+
+  &__content {
+    width: fit-content;
+    display: block;
+    margin-left: 20%;
+  }
+
+  &__title {
+    @extend %benner-title;
+  }
+
+  &__sub-title {
+    @extend %benner-title;
+    font-size: 1rem;
+  }
+
+  &__read-more-btn {
+    @extend %root-button;
+    margin-top: 3rem;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0) 80%,
+        rgba(0, 0, 0, 0.6)
+      ),
+      url(../assets/images/retro-car-1.jpg);
+    filter: brightness(0.4);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+
+  &__contact {
+    @extend %benner-title;
+    position: absolute;
+    top: 80vh;
+    display: flex;
+    justify-content: center;
+    width: 100vh;
+    &__icon {
+      margin: 15px;
+    }
+
+  }
+}
+#order1 {
+  @include animate-icon(popIn, 1500ms, (200ms*0));
+}
+#order2 {
+  @include animate-icon(popIn, 1500ms, (200ms*1));
+}
+#order3 {
+  @include animate-icon(popIn, 1500ms, (200ms*2));
+}
+
+@keyframes popIn {
+  from {
+    opacity: 0;
+    transform: translateY(20%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}

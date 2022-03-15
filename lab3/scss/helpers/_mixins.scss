@@ -1,0 +1,33 @@
+// Source: https://stackoverflow.com/questions/57017955/is-there-a-way-to-add-dark-mode-to-my-application-with-scss
+@import "../themes/themes";
+
+// From Sass 2.0 on, it is no longer allowed to declare globals on the fly.
+$theme-map: null;
+
+@mixin theme() {
+  @each $theme, $map in $themes {
+    // $theme: darkTheme, lightTheme
+    // $map: ('text-color': ..., 'bg-color': ...)
+
+    // make the $map globally accessible, so that theme-get() can access it
+    $theme-map: $map !global;
+
+    // make a class for each theme using interpolation -> #{}
+    // use & for making the theme class ancestor of the class
+    // from which you use @include theme() {...}
+    .#{$theme} & {
+      @content;    // the content inside @include theme() {...}
+    }
+  }
+  // no use of the variable $theme-map now
+  $theme-map: null !global;
+}
+
+@function theme-get($key) {
+  @return map-get($theme-map, $key);
+}
+
+@mixin animate-icon($animation,$duration,$delay){
+  animation: $animation $duration ease forwards;
+  animation-delay: $delay;
+}

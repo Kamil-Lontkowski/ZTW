@@ -1,0 +1,22 @@
+@use "./helpers/variables";
+@use "./themes/themes";
+@use "./helpers/mixins";
+@use "./components/_banner";
+@use "./components/_switch";
+
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap");
+@import "./helpers/mixins";
+
+* {
+  font-family: "Lato", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.content {
+  padding: 2rem;
+  @include theme() {
+    background-color: theme-get("bg-color");
+    color: theme-get("text-color");
+  }
+}

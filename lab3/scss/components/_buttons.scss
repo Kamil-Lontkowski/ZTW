@@ -1,0 +1,31 @@
+// Basic button styles
+@import "../helpers/variables";
+@import "../helpers/mixins";
+
+%root-button {
+  text-transform: uppercase;
+  cursor: pointer;
+  background: none;
+  border: 2px solid;
+  font: inherit;
+  line-height: 1;
+  margin: 0.5em;
+  padding: 1em 2em;
+  transition: $transition_duration;
+
+  @include theme() {
+    border-color: theme-get("button-color");
+    color: theme-get("button-font-color");
+  }
+
+  &:hover {
+    @include theme() {
+      color: theme-get("button-font-color-active");
+      background-color: theme-get("button-color");
+    }
+  }
+}
+
+button {
+  @extend %root-button;
+}
