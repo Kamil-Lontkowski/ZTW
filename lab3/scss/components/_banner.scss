@@ -1,4 +1,5 @@
 @use "./buttons";
+@import "../helpers/mixins";
 
 %benner-title {
   user-select: none;
@@ -47,5 +48,38 @@
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+  }
+
+  &__contact {
+    @extend %benner-title;
+    position: absolute;
+    top: 80vh;
+    display: flex;
+    justify-content: center;
+    width: 100vh;
+    &__icon {
+      margin: 15px;
+    }
+
+  }
+}
+#order1 {
+  @include animate-icon(popIn, 1500ms, (200ms*0));
+}
+#order2 {
+  @include animate-icon(popIn, 1500ms, (200ms*1));
+}
+#order3 {
+  @include animate-icon(popIn, 1500ms, (200ms*2));
+}
+
+@keyframes popIn {
+  from {
+    opacity: 0;
+    transform: translateY(20%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0%);
   }
 }

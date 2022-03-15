@@ -27,7 +27,7 @@
   background-color: #424242;
 }
 
-.main-banner__sub-title, .main-banner__title {
+.main-banner__contact, .main-banner__sub-title, .main-banner__title {
   user-select: none;
   color: white;
   font-size: 5rem;
@@ -65,7 +65,42 @@
   background-position: center;
   background-attachment: fixed;
 }
+.main-banner__contact {
+  position: absolute;
+  top: 80vh;
+  display: flex;
+  justify-content: center;
+  width: 100vh;
+}
+.main-banner__contact__icon {
+  margin: 15px;
+}
 
+#order1 {
+  animation: popIn 1500ms ease forwards;
+  animation-delay: 0ms;
+}
+
+#order2 {
+  animation: popIn 1500ms ease forwards;
+  animation-delay: 200ms;
+}
+
+#order3 {
+  animation: popIn 1500ms ease forwards;
+  animation-delay: 400ms;
+}
+
+@keyframes popIn {
+  from {
+    opacity: 0;
+    transform: translateY(20%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
 * {
   font-family: "Lato", sans-serif;
   margin: 0;

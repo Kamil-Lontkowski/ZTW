@@ -26,3 +26,8 @@ $theme-map: null;
 @function theme-get($key) {
   @return map-get($theme-map, $key);
 }
+
+@mixin animate-icon($animation,$duration,$delay){
+  animation: $animation $duration ease forwards;
+  animation-delay: $delay;
+}
