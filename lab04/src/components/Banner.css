@@ -1,0 +1,10 @@
+.banner {
+  background: url("../assets/images/drone_banner2.jpg") no-repeat center center
+    fixed;
+  height: 100vh;
+  background-size: cover;
+}
+
+.banner__mask {
+  background-color: rgba(0, 0, 0, 0.6);
+}
