@@ -7,6 +7,7 @@ import PopularityChart from "../components/PopularityChart";
 import TeamCarousel from "../components/TeamCarousel";
 import Form from "../components/form";
 import Maps from "../components/maps";
+import Quote from "../components/quote";
 
 export default function MainPage() {
   return (
@@ -14,24 +15,31 @@ export default function MainPage() {
       <NavBar />
       <Banner />
       <Row className="m-md-3 mt-3">
+        <h2 className="mb-3 text-center">Gdzie jesteśmy</h2>
+        <Col md={{ offset: 3, span: 6 }}>
+          <Form />
+        </Col>
+      </Row>
+      <Row className="m-md-3 mt-3">
+        <h2 className="mb-3 text-center">Napisz do nas</h2>
+        <Col md={{ offset: 3, span: 6 }}>
+          <Maps />
+        </Col>
+      </Row>
+      <Row className="m-md-3 mt-3">
+        <Col md={{ offset: 3, span: 6 }}>
+          <Quote />
+        </Col>
+      </Row>
+      <Row className="m-md-3 mt-3">
         <h2 className="mb-3 text-center">Dowiedz się więcej</h2>
         <Col md={{ offset: 3, span: 6 }}>
           <FAQ />
         </Col>
       </Row>
-<<<<<<< HEAD
-      <Row>
-        <Form />
-      </Row>
-      <Row>
-        <Maps />
-      </Row>
-      <Row>
-=======
       <hr className="border-dark" />
       <Row className="m-md-3 mt-3">
         <h2 className="mb-3 text-center">Nasi pracownicy</h2>
->>>>>>> ep
         <Col md={{ span: 8, offset: 2 }}>
           <TeamCarousel />
         </Col>
