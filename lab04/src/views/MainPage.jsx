@@ -6,6 +6,8 @@ import NavBar from "../components/NavBar";
 import Obrazek from "../components/Obrazek";
 import PopularityChart from "../components/PopularityChart";
 import TeamCarousel from "../components/TeamCarousel";
+import Form from "../components/form";
+import Maps from "../components/maps";
 
 export default function MainPage() {
   return (
@@ -18,9 +20,13 @@ export default function MainPage() {
           <FAQ />
         </Col>
       </Row>
-      <hr className="border-dark" />
-      <Row className="m-md-3 mt-3">
-        <h2 className="mb-3 text-center">Nasi pracownicy</h2>
+      <Row>
+        <Form />
+      </Row>
+      <Row>
+        <Maps />
+      </Row>
+      <Row>
         <Col md={{ span: 8, offset: 2 }}>
           <TeamCarousel />
         </Col>
