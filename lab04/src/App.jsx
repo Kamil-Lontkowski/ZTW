@@ -1,15 +1,20 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import MainPage from "./views/MainPage";
 
 import "./App.css";
+import { Container } from "react-bootstrap";
+import Footer from "./components/Footer";
 
 function App() {
   const [count, setCount] = useState(0);
 
   return (
-    <div className="App container-fluid">
-      <MainPage />
-    </div>
+    <React.Fragment>
+      <Container fluid>
+        <MainPage />
+      </Container>
+      <Footer />
+    </React.Fragment>
   );
 }
 
