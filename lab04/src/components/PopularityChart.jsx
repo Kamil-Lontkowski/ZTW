@@ -13,15 +13,15 @@ import {
 const data = [
   {
     name: "Drony wyścigowe",
-    pop: 20,
+    ilosc: 20,
   },
   {
     name: "Drony fotograficzne",
-    pop: 50,
+    ilosc: 50,
   },
   {
     name: "Drony amatorskie",
-    pop: 100,
+    ilosc: 100,
   },
 ];
 
@@ -33,7 +33,7 @@ export default function PopularityChart() {
       <YAxis />
       <Tooltip />
       <Legend />
-      <Bar dataKey="pop" fill="#8884d8" />
+      <Bar dataKey="ilosc" fill="#8884d8" />
     </BarChart>
   );
 }

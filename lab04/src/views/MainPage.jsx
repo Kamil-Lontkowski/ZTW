@@ -11,18 +11,23 @@ export default function MainPage() {
     <React.Fragment>
       <NavBar />
       <Banner />
-      <Row>
-        <Col md={{ span: 6, offset: 3 }}>
+      <Row className="m-md-3 mt-3">
+        <h2 className="mb-3 text-center">Dowiedz się więcej</h2>
+        <Col md={{ offset: 3, span: 6 }}>
           <FAQ />
         </Col>
       </Row>
-      <Row>
+      <hr className="border-dark" />
+      <Row className="m-md-3 mt-3">
+        <h2 className="mb-3 text-center">Nasi pracownicy</h2>
         <Col md={{ span: 8, offset: 2 }}>
           <TeamCarousel />
         </Col>
       </Row>
-      <Row>
-        <Col md={{ span: 6, offset: 3 }}>
+      <hr />
+      <Row className="m-md-3 mt-3">
+        <h2 className="mb-3 text-center">Jaki sprzęt naprawiamy najczęściej</h2>
+        <Col className="d-flex flex-column justify-content-center align-items-center">
           <PopularityChart />
         </Col>
       </Row>
