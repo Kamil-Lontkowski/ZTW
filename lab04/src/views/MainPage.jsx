@@ -5,6 +5,8 @@ import FAQ from "../components/FAQ";
 import NavBar from "../components/NavBar";
 import PopularityChart from "../components/PopularityChart";
 import TeamCarousel from "../components/TeamCarousel";
+import Form from "../components/form";
+import Maps from "../components/maps";
 
 export default function MainPage() {
   return (
@@ -15,6 +17,12 @@ export default function MainPage() {
         <Col md={{ span: 6, offset: 3 }}>
           <FAQ />
         </Col>
+      </Row>
+      <Row>
+        <Form />
+      </Row>
+      <Row>
+        <Maps />
       </Row>
       <Row>
         <Col md={{ span: 8, offset: 2 }}>
