@@ -3,6 +3,7 @@ import { Row, Col } from "react-bootstrap";
 import Banner from "../components/Banner";
 import FAQ from "../components/FAQ";
 import NavBar from "../components/NavBar";
+import Obrazek from "../components/Obrazek";
 import PopularityChart from "../components/PopularityChart";
 import TeamCarousel from "../components/TeamCarousel";
 
@@ -29,6 +30,11 @@ export default function MainPage() {
         <h2 className="mb-3 text-center">Jaki sprzęt naprawiamy najczęściej</h2>
         <Col className="d-flex flex-column justify-content-center align-items-center">
           <PopularityChart />
+        </Col>
+      </Row>
+      <Row>
+        <Col md={{ span: 8, offset: 2 }}>
+          <Obrazek />
         </Col>
       </Row>
     </React.Fragment>
