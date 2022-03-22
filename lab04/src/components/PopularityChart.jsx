@@ -8,6 +8,7 @@ import {
   Tooltip,
   Legend,
   Bar,
+  ResponsiveContainer
 } from "recharts";
 
 const data = [
@@ -27,7 +28,8 @@ const data = [
 
 export default function PopularityChart() {
   return (
-    <BarChart width={730} height={250} data={data}>
+    <ResponsiveContainer width="100%" height={400}>
+    <BarChart data={data}>
       <CartesianGrid strokeDasharray="3 3" />
       <XAxis dataKey="name" />
       <YAxis />
@@ -35,5 +37,6 @@ export default function PopularityChart() {
       <Legend />
       <Bar dataKey="ilosc" fill="#8884d8" />
     </BarChart>
+    </ResponsiveContainer>
   );
 }
