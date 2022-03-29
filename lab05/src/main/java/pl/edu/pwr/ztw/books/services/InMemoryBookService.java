@@ -28,4 +28,41 @@ public class InMemoryBookService implements IBooksService {
                 .findAny()
                 .orElse(null);
     }
+
+    @Override
+    public boolean deleteBook(int id) {
+        booksRepo.removeIf(b -> b.getId() == id);
+        return true;
+    }
+
+    @Override
+    public boolean addBook(Book book) {
+        boolean idCollision = booksRepo.stream()
+                .anyMatch(b -> b.getId() == book.getId());
+        if(idCollision){
+            return false;
+        }
+        booksRepo.add(book);
+        return true;
+    }
+
+    @Override
+    public boolean updateBook(Book book) {
+        int booksRepoSize = booksRepo.size();
+        int foundBookIndex = -1;
+
+        for(int i=0;i<booksRepoSize;i++){
+            if(booksRepo.get(i).getId() == book.getId()){
+                foundBookIndex = i;
+                break;
+            }
+        }
+
+        if(foundBookIndex == -1){
+            return false;
+        }
+
+        booksRepo.set(foundBookIndex, book);
+        return true;
+    }
 }
