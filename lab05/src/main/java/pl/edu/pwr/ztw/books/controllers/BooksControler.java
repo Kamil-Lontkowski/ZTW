@@ -5,8 +5,11 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import pl.edu.pwr.ztw.books.DTOs.ResponseBook;
 import pl.edu.pwr.ztw.books.models.Book;
 import pl.edu.pwr.ztw.books.services.IBooksService;
+
+import java.util.Collection;
 
 @RestController
 public class BooksControler {
@@ -15,12 +18,12 @@ public class BooksControler {
     IBooksService booksService;
 
     @RequestMapping(value = "/books", method = RequestMethod.GET)
-    public ResponseEntity<Object> getBooks() {
+    public ResponseEntity<Collection<ResponseBook>> getBooks() {
         return new ResponseEntity<>(booksService.getBooks(), HttpStatus.OK);
     }
 
     @RequestMapping(value = "/books/{id}", method = RequestMethod.GET)
-    public ResponseEntity<Object> getBook(@PathVariable("id") int id){
+    public ResponseEntity<ResponseBook> getBook(@PathVariable("id") int id){
         return new ResponseEntity<>(booksService.getBook(id), HttpStatus.OK);
     }
 

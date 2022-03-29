@@ -15,7 +15,7 @@ public class InMemoryBookService implements IBooksService {
     private static List<Book> booksRepo = new ArrayList<>();
 
     @Autowired
-    private AuthorService authorService;
+    private IAuthorService authorService;
 
     static {
         booksRepo.add(new Book(1,"Potop", 1, 936));
