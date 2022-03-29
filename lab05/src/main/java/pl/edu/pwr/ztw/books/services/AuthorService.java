@@ -14,7 +14,7 @@ public class AuthorService implements IAuthorService {
     static {
         AuthorRepo.add(new Author(1, "Henryk", "Sienkiewicz"));
         AuthorRepo.add(new Author(2, "Stanisław", "Reymont"));
-        AuthorRepo.add(new Author(2, "Adam", "Mickiewicz"));
+        AuthorRepo.add(new Author(3, "Adam", "Mickiewicz"));
     }
 
     @Override

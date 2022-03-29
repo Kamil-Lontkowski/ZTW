@@ -3,13 +3,13 @@ package pl.edu.pwr.ztw.books.models;
 public class Book {
     private int id;
     private String title;
-    private String author;
+    private int authorId;
     int pages;
 
-    public Book(int id, String title, String author, int pages) {
+    public Book(int id, String title, int author, int pages) {
         this.id = id;
         this.title = title;
-        this.author = author;
+        this.authorId = author;
         this.pages = pages;
     }
 
@@ -25,12 +25,12 @@ public class Book {
         this.title = title;
     }
 
-    public String getAuthor() {
-        return author;
+    public int getAuthorId() {
+        return authorId;
     }
 
-    public void setAuthor(String author) {
-        this.author = author;
+    public void setAuthorId(int authorId) {
+        this.authorId = authorId;
     }
 
     public int getPages() {
@@ -40,4 +40,5 @@ public class Book {
     public void setPages(int pages) {
         this.pages = pages;
     }
+
 }
