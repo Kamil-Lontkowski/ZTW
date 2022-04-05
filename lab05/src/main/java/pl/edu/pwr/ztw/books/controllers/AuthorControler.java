@@ -9,6 +9,7 @@ import pl.edu.pwr.ztw.books.models.Author;
 import pl.edu.pwr.ztw.books.services.IAuthorService;
 
 @RestController
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 public class AuthorControler {
 
     @Autowired
