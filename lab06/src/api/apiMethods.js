@@ -37,5 +37,5 @@ export async function deleteData(url = "", params = {}) {
   const response = await fetch(url, {
     method: "DELETE",
   });
-  return response.json();
+  //return response.json();
 }
