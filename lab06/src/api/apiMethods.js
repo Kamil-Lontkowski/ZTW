@@ -7,7 +7,7 @@ function urlSearchParams(url = "", params = {}) {
 
 export async function postData(url = "", data = {}, params = {}) {
   url = urlSearchParams(url, params);
-
+  debugger;
   const response = await fetch(url, {
     method: "POST",
     headers: {

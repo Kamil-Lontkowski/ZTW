@@ -32,6 +32,17 @@ export default {
         console.error(e);
       }
     },
+    async addBook(book) {
+      console.log(book);
+      const { author, ...bookDto } = book;
+      bookDto.authorId = author.id;
+      try {
+        this.booksService.addBook(bookDto);
+        this.books.push(book);
+      } catch (e) {
+        console.error(e);
+      }
+    },
   },
   mounted() {
     this.getBooks();
@@ -40,11 +51,15 @@ export default {
 </script>
 <template>
   <div class="books-page">
-    <AddBookForm />
-    <h3 v-if="books" class="col-md-6">
-      Ilość książek: {{ this.books.length }}
-    </h3>
     <div class="row justify-content-center">
+      <AddBookForm class="col-md-6" :addBook="addBook" />
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-md-3"></div>
+      <h3 v-if="books" class="col-md-6">
+        Ilość książek: {{ this.books.length }}
+      </h3>
+      <div class="col-md-3"></div>
       <BookList
         v-if="!loading"
         class="col-md-6"

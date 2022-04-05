@@ -21,7 +21,7 @@ export default {
         <tr v-for="book in booksList" :key="book.id">
           <td>{{ book.id }}</td>
           <td>{{ book.title }}</td>
-          <td>{{ book.author.firstName + book.author.lastName }}</td>
+          <td>{{ book.author.firstName + " " + book.author.lastName }}</td>
           <td>{{ book.pages }}</td>
           <td>
             <router-link
