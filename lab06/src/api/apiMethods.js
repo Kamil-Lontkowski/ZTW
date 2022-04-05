@@ -1,4 +1,4 @@
-export function urlSearchParams(url = "", params = {}) {
+function urlSearchParams(url = "", params = {}) {
   const result = new URL(url);
   result.search = new URLSearchParams(params).toString();
 

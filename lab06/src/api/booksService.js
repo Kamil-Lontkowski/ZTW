@@ -1,4 +1,4 @@
-import { postData, patchData, urlSearchParams, deleteData } from "./apiMethods";
+import { postData, patchData, deleteData } from "./apiMethods";
 export class booksService {
 
   constructor(baseURL = "http://localhost:8080") {
@@ -9,25 +9,25 @@ export class booksService {
     }
   }
 
-  async function getAllBooks() {
+  async  getAllBooks() {
     const response = await fetch(this.baseURL);
     return response.json();
   }
   
-  async function getBookById(id) {
+  async getBookById(id) {
     const response = await fetch(this.baseURL + "/" + id.toString())
     return response.json();
   }
   
-  async function deleteBookById(id) {
+  async deleteBookById(id) {
     return deleteData(this.baseURL + "/" + id.toString())
   }
   
-  async function addBook(book) {
+  async addBook(book) {
     return postData(this.baseURL, book);
   }
   
-  async function updateBook(book) {
+  async updateBook(book) {
     return patchData(this.baseURL, book)
   }
 
