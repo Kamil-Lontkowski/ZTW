@@ -12,6 +12,7 @@ import pl.edu.pwr.ztw.books.services.IBooksService;
 import java.util.Collection;
 
 @RestController
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 public class BooksControler {
     // czy to jest singleton ?
     @Autowired
