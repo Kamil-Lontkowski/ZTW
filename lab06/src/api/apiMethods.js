@@ -28,7 +28,6 @@ export async function patchData(url = "", data = {}, params = {}) {
     },
     body: JSON.stringify(data),
   });
-  return response.json();
 }
 
 export async function deleteData(url = "", params = {}) {

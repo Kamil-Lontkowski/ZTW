@@ -41,7 +41,7 @@ export default {
     isValid() {
       this.errorMsg = "";
       if (this.title.length < 3) {
-        this.errorMsg = "Tytół musi mieć conajmnie 3 zanki";
+        this.errorMsg = "Tytuł musi mieć conajmnie 3 zanki";
         return false;
       }
 
@@ -74,7 +74,7 @@ export default {
       </legend>
       <legend v-else>Dodaj książki</legend>
       <div class="mb-3">
-        <label for="title" class="form-label">Tytół</label>
+        <label for="title" class="form-label">Tytuł</label>
         <input
           type="text"
           class="form-control"
