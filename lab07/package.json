@@ -1,0 +1,23 @@
+{
+  "name": "lab07",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./src/index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon -e js,graphql src/App.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@graphql-yoga/node": "^2.1.0",
+    "graphql": "^16.3.0",
+    "node-fetch": "^3.2.3"
+  },
+  "devDependencies": {
+    "eslint": "^8.13.0",
+    "nodemon": "^2.0.15",
+    "prettier": "2.6.2"
+  }
+}
