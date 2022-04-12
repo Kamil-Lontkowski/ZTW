@@ -16,4 +16,18 @@ export const resolvers = {
       return todos.find((todo) => todo.id === id);
     },
   },
+  User: {
+    todos: async (parent) => {
+      const todos = await getTodos();
+      const user_todos = todos.filter((todo) => todo.userId === parent.id);
+      return user_todos;
+    },
+  },
+  ToDoItem: {
+    user: async (parent) => {
+      const users = await getUsers();
+      const user = users.find((user) => user.id === parent.userId);
+      return user;
+    },
+  },
 };
