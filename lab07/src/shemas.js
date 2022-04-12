@@ -3,7 +3,10 @@ const typeDefinitions = /* GraphQL */ `
     id: ID!
     name: String!
     email: String!
-    login: String!
+    phone: String!
+    website: String!
+    username: String!
+    company: Company
     todos: [ToDoItem!]!
   }
 
@@ -12,6 +15,12 @@ const typeDefinitions = /* GraphQL */ `
     title: String!
     completed: Boolean!
     user: User!
+  }
+
+  type Company {
+    name: String!
+    catchPhrase: String!
+    bs: String!
   }
 
   type Query {
